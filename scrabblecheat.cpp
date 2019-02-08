@@ -14,9 +14,6 @@
 
 using namespace std;
 
-// stores the key temporarily before use
-static char key_alpha[26] = { '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1' };
-
 static inline bool FileExists(const std::string& filename)
 {
 
@@ -47,6 +44,10 @@ struct MyKeyHash {
         return h % tableSize;
     }
 };
+
+// stores the key temporarily before use
+static char key_alpha[26] = { '1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1' };
+
 
 int main()
 {
@@ -101,7 +102,7 @@ int main()
             hmap.get(key_alpha,valout);
             cout << "KEY: " << key_alpha << " VALUE(S): " << valout << "\n";
             //now test the remove
-            //hmap.remove(alpha);
+            //hmap.remove(key_alpha);
         }
 
     }

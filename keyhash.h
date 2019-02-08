@@ -1,4 +1,5 @@
-// cribbed from github
+// cribbed from stackoverflow.com
+// https://stackoverflow.com/questions/8317508/hash-function-for-a-string
 #pragma once
 #include "defines.h"
 #include <string>
