@@ -9,17 +9,17 @@ static const size_t tableSize = 250007;
 
 // Macros to safe delete objects and arrays
 #define SAFE_DELETE(p)                                                         \
-  do {                                                                         \
+  {                                                                            \
     if (p) {                                                                   \
       delete p;                                                                \
       p = 0;                                                                   \
     }                                                                          \
-  } while (false)
+  }
 
 #define SAFE_DELETEA(p)                                                        \
-  do {                                                                         \
+  {                                                                         \
     if (p) {                                                                   \
       delete[] p;                                                              \
       p = 0;                                                                   \
     }                                                                          \
-  } while (false)
+  }

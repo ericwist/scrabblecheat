@@ -33,6 +33,7 @@ static inline void remove_chars_if_not(string& s, const string& allowed) {
     }), s.end());
 }
 
+// https://stackoverflow.com/questions/8317508/hash-function-for-a-string
 struct MyKeyHash {
     unsigned long operator()(const char* k) const
     {

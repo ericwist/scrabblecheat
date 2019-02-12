@@ -1,7 +1,6 @@
 // cribbed from github and changed to suit the needs of scrabble cheat
 #pragma once
 #include "hashnode.h"
-#include "keyhash.h"
 #include "defines.h"
 #include <cstddef>
 #include <string>

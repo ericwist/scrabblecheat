@@ -157,7 +157,6 @@
     <ClInclude Include="defines.h" />
     <ClInclude Include="hashmap.h" />
     <ClInclude Include="hashnode.h" />
-    <ClInclude Include="keyhash.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="scrabble.txt" />
