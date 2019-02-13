@@ -28,7 +28,7 @@ public:
             }
             table[i] = nullptr;
         }
-        // table is declared static, no need to destroy it
+        // no need to destroy table
     }
 
     void get(const K &key, V &value) {
