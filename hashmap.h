@@ -10,7 +10,7 @@
 // My implementation, in order to suit the needs of scrabble cheat,
 // searches the linked list to see if a HashNode already exists 
 // with the given value. If found, it does nothing. If not, it adds 
-// a new HashNode with the given key and value to the linked  list.
+// a new HashNode with the given key and value to the linked-list.
 // -EJW 02/13/2019
 #pragma once
 #include "hashnode.h"
@@ -51,7 +51,7 @@ public:
 
         while (entry != NULL) {
             if (entry->getKey() == skey) {
-                //concatenate the values contain by this one key
+                //concatenate the values contained in this one key
                 if (value.length() > 0) {
                     value += (", " + entry->getValue());
                 } else {
