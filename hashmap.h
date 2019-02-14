@@ -1,4 +1,17 @@
-// cribbed from github and changed to suit the needs of scrabble cheat
+// Cribbed from github and changed to suit the needs of scrabble cheat
+// 
+// After my changes this is no longer a traditional HashMap.
+//
+// A traditional HashMap doesn't allow duplicate keys but allows duplicate values. 
+// That means A single key can't contain more than 1 value but more 
+// than 1 key can contain a single value. HashMap allows null key 
+// also but only once and multiple null values.
+// 
+// My implementation, in order to suit the needs of scrabble cheat,
+// searches the linked list to see if a HashNode already exists 
+// with the given value. If found, it does nothing. If not, it adds 
+// a new HashNode with the given key and value to the linked  list.
+// -EJW 02/13/2019
 #pragma once
 #include "hashnode.h"
 #include "defines.h"
@@ -38,6 +51,7 @@ public:
 
         while (entry != NULL) {
             if (entry->getKey() == skey) {
+                //concatenate the values contain by this one key
                 if (value.length() > 0) {
                     value += (", " + entry->getValue());
                 } else {
@@ -53,7 +67,8 @@ public:
         unsigned long hashValue = hashFunc(skey.c_str());
         HashNode<K, V> *prev = nullptr;
         HashNode<K, V> *entry = table[hashValue];
-
+        // This is where the difference is, I check against 
+        // the Value instead of the Key.
         while (entry != nullptr && entry->getValue() != value) {
             prev = entry;
             entry = entry->getNext();
