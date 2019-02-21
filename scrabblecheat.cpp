@@ -56,6 +56,7 @@ int main()
     if (!FileExists(filename))
     {
         std::cout << "The file " << filename << " was not found!\n";
+        exit(1);
     }
 
     std::ifstream file("scrabble.txt");
@@ -108,7 +109,7 @@ int main()
 
     }
 
-
+    exit(0);
 }
 
 //Here are some links to some hash map code / discussions:
